@@ -1,0 +1,14 @@
+.Header-main img{
+    width: 100%;
+    height: 300px;
+}
+.heading{
+    position: absolute;
+    text-align: center;
+    color: #a503fc;
+    font-weight: 700;
+    font-size: 50px;
+    top: 15%;
+    background-color: transparent;
+    left: 38%;
+}

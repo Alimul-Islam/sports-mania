@@ -1,25 +1,63 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Component/Header/Header';
+import LeagueDetail from './Component/LeagueDetails/LeagueDetail';
+import LeagueList from './LeagueList/LeagueList';
+import React from "react";
+import ExploreLeague from './Component/ExploreLeague/ExploreLeague';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Router>     
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/league-:idLeague-:name">
+            <LeagueSingle />
+          </Route>
+        </Switch>
+    </Router> 
+  );
+}
+function Home() {
+  return (
+    <div className="App" align="center">
+      <div className="cardView">
+        <Header></Header> 
+      </div>
+      <div className="container">
+        <div className="row">
+        <LeagueDetail></LeagueDetail> 
+        <div>
+      </div>
+    </div>
+    </div>
+    </div> 
+  );
+}
+function About() {
+  return (
+    <div>
+      <h2>About</h2>
     </div>
   );
 }
-
+function LeagueSingle(idLeague,name) {
+  return (
+    <ExploreLeague></ExploreLeague> 
+  );
+}
 export default App;

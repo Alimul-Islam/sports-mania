@@ -1,0 +1,41 @@
+#root{
+    background:#fff;
+}
+.img-blur{
+    opacity: 0.5;
+}
+.heading img {
+    background: transparent;
+    width: 30%;
+    height: auto;
+}
+.heading{ 
+    left: 30% !important;
+}
+.panel{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.panel .col-md-6{
+    background: transparent;
+}
+.panel h3{
+    color: #fff;
+    background: transparent;
+}
+.sub-img{
+    padding: 15px;
+    background: transparent;
+    width: 100%;
+    border-radius: 25px;
+}
+.panel span{
+    background:transparent;
+    color: #fff;
+    font-size: 20px;
+}
+footer{
+    text-align: center;
+    word-spacing: 10px;
+}
